@@ -1,5 +1,7 @@
 package Starch::Plugin::SecureStateID;
 
+# ABSTRACT: use cryptographically secure random when making state IDs
+
 use Math::Random::Secure ();
 use Digest::SHA ();
 use Scalar::Util qw( refaddr );
@@ -41,10 +43,6 @@ around generate_state_id => sub {
 
 1;
 __END__
-
-=head1 NAME
-
-Starch::Plugin::SecureStateID - use cryptographically secure random when making state IDs
 
 =head1 SYNOPSIS
 

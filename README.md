@@ -1,6 +1,6 @@
 # NAME
 
-Starch::Plugin::SecureStateID
+Starch::Plugin::SecureStateID - use cryptographically secure random when making state IDs
 
 # VERSION
 
@@ -18,10 +18,6 @@ version 0.001
 For each state stored in Starch, the generated ID is virtually guaranteed to be unique. It is not generated to be unguessable. By using this plugin, the state will include a random number generated using [Math::Random::Secure](https://metacpan.org/pod/Math::Random::Secure) to assure that is both unique and includes a cryptographically secure random number in the calculated ID.
 
 This plugin also selects upgrades the state ID so that it is calculated using SHA-256 instead of SHA-1. SHA-1 hashed values are potentially guessable for attackers with a large enough budget. A possible downside is that SHA-256 creates a key that is 256 bits long, which results in an ID string that is 64 bytes long, rather than the 40 byte long string provided by SHA-1. The version of SHA used may be chosen with the ["secure\_state\_id\_sha"](#secure_state_id_sha) option.
-
-# NAME
-
-Starch::Plugin::SecureStateID - use cryptographically secure random when making state IDs
 
 # OPTIONAL MANAGER ARGUMENTS
 
@@ -42,11 +38,11 @@ and would not be available to the Open Source community.
 
 # AUTHOR
 
-Andrew Sterling Hanenkamp &lt;hanenkamp@cpan.org>
+Andrew Sterling Hanenkamp <hanenkamp@cpan.org>
 
 # COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2016 by Andrew Sterling Hanenkamp.
+This software is copyright (c) 2017 by Andrew Sterling Hanenkamp.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
