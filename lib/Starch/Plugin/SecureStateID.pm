@@ -55,7 +55,7 @@ __END__
 
 For each state stored in Starch, the generated ID is virtually guaranteed to be unique. It is not generated to be unguessable. By using this plugin, the state will include a random number generated using L<Math::Random::Secure> to assure that is both unique and includes a cryptographically secure random number in the calculated ID.
 
-This plugin also selects upgrades the state ID so that it is calculated using SHA-256 instead of SHA-1. SHA-1 hashed values are potentially guessable for attackers with a large enough budget. A possible downside is that SHA-256 creates a key that is 256 bits long, which results in an ID string that is 64 bytes long, rather than the 40 byte long string provided by SHA-1. The version of SHA used may be chosen with the L</secure_state_id_sha> option.
+This plugin also upgrades the state ID so that it is calculated using SHA-256 instead of SHA-1. SHA-1 hashed values are potentially guessable for attackers with a large enough budget. A possible downside is that SHA-256 creates a key that is 256 bits long, which results in an ID string that is 64 bytes long, rather than the 40 byte long string provided by SHA-1. The version of SHA used may be chosen with the L</secure_state_id_sha> option.
 
 =head1 OPTIONAL MANAGER ARGUMENTS
 
